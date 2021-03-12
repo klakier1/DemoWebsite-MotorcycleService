@@ -1,14 +1,10 @@
 {
-  "name": "klakier/jr-1.0.0",
-  "description": "",
-  "authors": [
-    {
-      "name": "Lukasz Paleczek",
-      "email": "lukasz.paleczek@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=7.4.0"
-  }
+    "name": "lukas/a",
+    "authors": [
+        {
+            "name": "Lukasz Paleczek",
+            "email": "lukasz.paleczek@gmail.com"
+        }
+    ],
+    "require": {}
 }
