@@ -345,57 +345,6 @@ header.header-sticky {
   transition: all 0.2s ease-in-out;
 }
 
-.brand-card-img:hover {
-  transform: rotate3d(1, -1, 0, 45deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.brand-card-text {
-  width: min-content;
-  margin: auto;
-  padding: 0.1rem 0;
-}
-
-.brands {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 3rem 2rem;
-}
-
-.brand-card {
-  height: 9rem;
-  width: 8rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.brand-card-img-container {
-  flex: 1 1 auto;
-  background-color: rgba(255, 255, 255, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand-card-text-container {
-  flex: 0 0 2rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand-card-img {
-  max-width: 80%;
-  max-height: 80%;
-  transition: all 0.2s ease-in-out;
-}
-
 .brand-card:hover .brand-card-img {
   transform: rotate3d(1, -1, 0, 45deg);
   transition: all 0.2s ease-in-out;
