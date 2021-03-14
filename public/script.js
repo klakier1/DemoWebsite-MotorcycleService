@@ -38,8 +38,11 @@ _navBurger.addEventListener("click", () => {
   //set transition
   _navList.style.transition = "transform 0.3s ease-in-out";
 
-  //toogle slide
+  //toggle slide
   _navList.classList.toggle("nav-slide");
+
+  //toggle burger
+  _navBurger.classList.toggle("nav-burger-toggle");
 
   //set animations for list items
   _navListItems.forEach((item, index) => {

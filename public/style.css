@@ -92,6 +92,76 @@ header.header-sticky {
   height: 0.16rem;
   background-color: aliceblue;
   border-radius: 0.08rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-burger-toggle .nav-burger-line1 {
+  transform: translate(0rem, 0.55rem) rotateZ(-45deg);
+}
+
+.nav-burger-toggle .nav-burger-line2 {
+  opacity: 0;
+}
+
+.nav-burger-toggle .nav-burger-line3 {
+  transform: translate(0rem, -0.55rem) rotateZ(45deg);
+}
+
+/* add by JS only for animation time, to every nav list link */
+/* to prevent animation of links, while website is in 'PC view'*/
+@keyframes nav-list-animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive navBar*/
+@media screen and (max-width: 768px) {
+  .nav-burger {
+    display: flex;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #nav-container {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  #nav-container .nav-ul-contaier {
+    position: absolute;
+    height: 80vh;
+    top: 4rem;
+    right: 0;
+    overflow-x: hidden;
+    visibility: hidden;
+  }
+
+  #nav-container .nav-ul-contaier ul {
+    position: relative;
+    height: 100%;
+    background-color: rgb(48, 48, 48);
+    flex-direction: column;
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  #nav-container .nav-ul-contaier ul li {
+    padding: 0rem 0rem;
+    opacity: 0;
+  }
+
+  .nav-slide {
+    transform: translateX(0) !important;
+  }
 }
 
 /************************* HOME SECTION ************************/
@@ -198,6 +268,19 @@ header.header-sticky {
   animation: wheelie-animation 1s linear;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes wheelie-animation {
+  0% {
+    transform: translateX(-100%) translateY(-50%) rotateZ(5deg);
+  }
+  30% {
+    transform: translateX(30vw) translateY(-50%) rotateZ(-25deg);
+  }
+
+  100% {
+    transform: translateX(calc(100vw + 100%)) translateY(-50%) rotateZ(-5deg);
+  }
 }
 
 /************************* OFFER SECTION ************************/
@@ -313,7 +396,7 @@ header.header-sticky {
   transition: all 0.2s ease-in-out;
 }
 
-.brand-card-img:hover {
+.brand-card:hover .brand-card-img {
   transform: rotate3d(1, -1, 0, 45deg);
   transition: all 0.2s ease-in-out;
 }
@@ -452,6 +535,7 @@ header.header-sticky {
   gap: 3rem;
 }
 
+/* social links */
 .bi {
   fill: rgb(224, 224, 224);
   width: 70px;
@@ -484,62 +568,8 @@ footer p {
   font-size: 0.8rem;
 }
 
-@keyframes wheelie-animation {
-  0% {
-    transform: translateX(-100%) translateY(-50%) rotateZ(5deg);
-  }
-  30% {
-    transform: translateX(30vw) translateY(-50%) rotateZ(-25deg);
-  }
-
-  100% {
-    transform: translateX(calc(100vw + 100%)) translateY(-50%) rotateZ(-5deg);
-  }
-}
-
-/* Responsive navBar*/
-@media screen and (max-width: 768px) {
-  .nav-burger {
-    display: flex;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-  #nav-container {
-    position: relative;
-    justify-content: flex-end;
-  }
-
-  #nav-container .nav-ul-contaier {
-    position: absolute;
-    height: 80vh;
-    top: 4rem;
-    right: 0;
-    overflow-x: hidden;
-    visibility: hidden;
-  }
-
-  #nav-container .nav-ul-contaier ul {
-    position: relative;
-    height: 100%;
-    background-color: rgb(48, 48, 48);
-    flex-direction: column;
-    transform: translateX(100%);
-    visibility: visible;
-  }
-
-  #nav-container .nav-ul-contaier ul li {
-    padding: 0rem 0rem;
-    opacity: 0;
-  }
-
-  .nav-slide {
-    transform: translateX(0) !important;
-  }
-}
-
+/************************* RWS for sections ************************/
+/* up to 1024px */
 @media screen and (max-width: 1024px) {
   #home-description1 {
     grid-column: 2/6;
@@ -560,6 +590,7 @@ footer p {
   }
 }
 
+/* up to 768px */
 @media screen and (max-width: 768px) {
   #home-container {
     grid-template-columns: 5% repeat(6, minmax(10%, 1fr)) 5%;
@@ -597,17 +628,5 @@ footer p {
   .brand-card {
     height: 8rem;
     width: 7rem;
-  }
-}
-
-@keyframes nav-list-animation {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
