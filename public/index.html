@@ -106,11 +106,33 @@
         <div id="contact-container">
           <div class="anchor" id="contact-container-anchor"></div>
           <h2 class="text-shadow">Kontakt</h2>
+          <div class="contact-map-info-container">
+            <div class="contact-info">
+              <h3>RAJCHEL-GARAGE</h3>
+              <p>
+                ul. Jakakolwiek 123<br />
+                55-555 Gdziekolwiek<br />
+                tel. +48 32 123 1212<br />
+                kom. +48 123 123 123<br />
+                email: workshop@rgarage.pl<br />
+              </p>
+              <h4>Godzint otwarcia</h4>
+              <p>pn. - pt. 7:00 - 17:00</p>
+            </div>
+            <div id="contact-map"></div>
+          </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer><p>Demo website</p></footer>
 
+    <!-- JS -->
     <script src="script.js"></script>
+    <script src="map.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdv8mFNteZMSOxHnnVIMo3sbCcaVmW9wo&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   </body>
 </html>
