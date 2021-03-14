@@ -444,6 +444,31 @@ header.header-sticky {
   width: 400px;
 }
 
+.contatct-social-container {
+  margin: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.bi {
+  fill: rgb(224, 224, 224);
+  width: 70px;
+}
+
+.bi-facebook:hover {
+  fill: #4668b3;
+}
+
+.bi-twitter:hover {
+  fill: #3095d3;
+}
+
+.bi-youtube:hover {
+  fill: #d94348;
+}
+
 /************************* FOOTER ************************/
 footer {
   width: 100%;
